@@ -1,7 +1,59 @@
+.navbar {
+    background: #464646;
+}
+
+.bg-silver {
+    background: #5b605f
+}
+
 .navbar-toggler:focus{
     outline: none;
 }
 
 .navbar-toggler {
     border: none;
+}
+
+.card-header {
+    height: 65px;
+}
+
+.content-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.custom-select:focus {
+    outline: none;
+}
+
+.card.hover-shadow:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+}
+
+/*----------------------- Shadow effect for product cards -----------------------*/
+body .custom-control-input:checked~.custom-control-label::before {
+	border-color: #adb5bd;
+    background-color: silver;
+}
+
+body .custom-control-input:focus~.custom-control-label::before {
+	box-shadow: none;
+}
+
+body .custom-control-input:focus:not(:checked)~.custom-control-label::before {
+    border-color: #adb5bd;
+}
+
+
+
+body .custom-select:focus {
+    border-color: silver;
+    outline: 0;
+    box-shadow: none;
 }

@@ -1,28 +1,32 @@
 import React from 'react';
 import ProductDetail from './ProductDetail';
+import { connect } from 'react-redux';
+import { fetchProducts } from '../actions';
 
 class ProductsList extends React.Component {
-    
+    componentDidMount() {
+        this.props.fetchProducts();
+    }
+
     renderGoods = () => {
-        
-        // delete
-        const testProducts = [ { title: 'product1', id: 1 }, { title: 'product2', id: 2 }, { title: 'product3', id: 3 },{ title: 'product4', id: 4 },{ title: 'product5', id: 5 }] 
-        
-        return testProducts.map(({ title, id }) => {
+        return this.props.products.map(product => {
             return (
-                <ProductDetail title={title} key={id}/>
+                <ProductDetail product={product} key={product.entity_id} />
             );
         })
-    
     }
 
     render() {    
         return (
-            <div className="card-columns">
+            <div className="row">
                 {this.renderGoods()}
             </div>
         );
     }
 }
 
-export default ProductsList;
+const mapStateToProps = (state) => {
+    return { products: Object.values(state.products) };
+}
+
+export default connect(mapStateToProps, { fetchProducts })(ProductsList);

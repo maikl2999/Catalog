@@ -10,12 +10,12 @@ class App extends React.Component {
         return (
             <div>
                 <Header />
-                <div className="container">
+                <div className="container mt-3">
                     <div className="row justify-content-between">
-                        <div className="col-md-3 border">
+                        <div className="col-md-3">
                             <Sidebar />
                         </div>
-                        <div className="col-md-9 border">
+                        <div className="col-md-9">
                             <Toolbar />
                             <ProductsList />
                         </div>
