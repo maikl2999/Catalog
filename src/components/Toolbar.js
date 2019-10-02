@@ -3,22 +3,12 @@ import { connect } from 'react-redux';
 import { sortBy, changeShowPerPage } from '../actions';
 
 const Toolbar = (props) => {
-/*
-кол товаров на странице 9
-текущая страница 8
-
-*/
-
-
     return (
         <div className="row mt-3">
             <div className="col-md-4 text-center">
                 Show 
                 <select 
-                    onChange={e => {
-                        props.changeShowPerPage(e.target.value)
-                  
-                    }} 
+                    onChange={e => props.changeShowPerPage(e.target.value)} 
                     className="custom-select custom-select-sm w-25 mx-1" 
                     defaultValue="6">
                         <option value="3">3</option>
