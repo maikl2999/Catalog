@@ -1,42 +1,90 @@
-.navbar {
-    background: #464646;
-}
-
-.bg-silver {
-    background: #5b605f
-}
-
-.navbar-toggler:focus{
-    outline: none;
-}
-
-.navbar-toggler {
-    border: none;
-}
-
-.card-header {
-    height: 65px;
-}
-
 .content-center {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.background-light-black {
+    background: #5b605f;
+}
+
+.background-black {
+    background: #464646;
+}
+
+.background-silver {
+    background: #cccccc;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus{
+    outline: none;
+}
+
+.card-header {
+    height: 65px;
+}
+
 .card:hover {
     cursor: pointer;
 }
 
-.custom-select:focus {
-    outline: none;
+#page-numbers {
+    list-style: none;
+    display: flex;
+}
+  
+#page-numbers > li {
+    color: #000000;
+    user-select: none;
+    cursor: pointer;
 }
 
+#page-numbers li.carrent-page {
+    background: #5b605f;
+    color: white;
+}
+
+#page-numbers li.paginationDisable {
+    color: silver;
+    cursor: auto;
+}
+
+.footer-bg{
+    background: #9e9e9e;
+}
+
+#footer{
+    color: #f5f5f5;
+}
+
+#footer ul{
+    padding-left: 0;
+}
+
+#footer ul li {
+    list-style: none;
+}
+
+#footer ul li a {
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+.footer-bottom-bg{
+    background: #989898;
+}
+
+/*-----------------------5b605f Shadow effect for product cards -----------------------*/
 .card.hover-shadow:hover {
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
 }
 
-/*----------------------- Shadow effect for product cards -----------------------*/
+
+/*----------------------- Castom style for checkbox -----------------------*/
 body .custom-control-input:checked~.custom-control-label::before {
 	border-color: #adb5bd;
     background-color: silver;
@@ -51,7 +99,7 @@ body .custom-control-input:focus:not(:checked)~.custom-control-label::before {
 }
 
 
-
+/*----------------------- Castom style for select -----------------------*/
 body .custom-select:focus {
     border-color: silver;
     outline: 0;

@@ -1,7 +1,8 @@
 import React from 'react';
 import ProductDetail from './ProductDetail';
 import { connect } from 'react-redux';
-import { fetchProducts } from '../actions';
+import { fetchProducts, changeNumberOfProduct, changeShowPerPage } from '../actions';
+import { filterPrice } from './filterPrice';
 
 class ProductsList extends React.Component {
     componentDidMount() {
@@ -9,11 +10,29 @@ class ProductsList extends React.Component {
     }
 
     renderGoods = () => {
-        return this.props.products.map(product => {
-            return (
-                <ProductDetail product={product} key={product.entity_id} />
-            );
-        })
+        if(this.props.products.length === 0) {
+            return <div>Loading...</div>
+        }
+
+        let renderProd = filterPrice(this.props.priceChack, this.props.products);
+            
+        if(this.props.sort.sortBy !== 'position') {
+            renderProd.sort(this.props.sort.cb[this.props.sort.sortBy])
+        }
+
+        if(this.props.numberProducts !== renderProd.length) {
+            this.props.changeNumberOfProduct(renderProd.length);
+            this.props.changeShowPerPage()
+        }
+
+        return (
+            renderProd
+            .splice(this.props.page.showFrom, this.props.page.showPerPage)
+            .map(product => {
+                return (
+                    <ProductDetail product={product} key={product.entity_id} />
+                );
+        }));
     }
 
     render() {    
@@ -26,7 +45,13 @@ class ProductsList extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    return { products: Object.values(state.products) };
+    return { 
+        products: Object.values(state.products),
+        priceChack: state.price,
+        sort: state.sort,
+        page: state.page,
+        numberProducts: state.numberProducts
+    };
 }
 
-export default connect(mapStateToProps, { fetchProducts })(ProductsList);
+export default connect(mapStateToProps, { fetchProducts, changeNumberOfProduct, changeShowPerPage })(ProductsList);
