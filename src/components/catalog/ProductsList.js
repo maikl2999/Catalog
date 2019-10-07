@@ -1,7 +1,7 @@
 import React from 'react';
-import ProductDetail from './ProductDetail';
 import { connect } from 'react-redux';
-import { fetchProducts, changeNumberOfProduct, changeShowPerPage } from '../actions';
+import { fetchProducts, changeNumberOfProduct, changeShowPerPage } from '../../actions';
+import ProductDetail from './ProductDetail';
 import { filterPrice } from './filterPrice';
 
 class ProductsList extends React.Component {

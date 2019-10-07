@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { sortBy, changeShowPerPage } from '../actions';
+import { sortBy, changeShowPerPage } from '../../actions';
 
 const Toolbar = (props) => {
     return (

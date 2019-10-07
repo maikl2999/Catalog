@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { changePrice, changeCurrentPage } from '../actions';
+import { changePrice, changeCurrentPage } from '../../actions';
 
 class Sidebar extends React.Component {
     onChange = (e) => {
