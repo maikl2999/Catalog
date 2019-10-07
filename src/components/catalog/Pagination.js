@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { changeCurrentPage } from '../actions';
+import { changeCurrentPage } from '../../actions';
 
 class Pagination extends React.Component {
     changePage = e => this.props.changeCurrentPage(+(e.target.id));

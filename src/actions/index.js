@@ -62,3 +62,17 @@ export const changeCurrentPage = (number) => (dispatch, getState) => {
 
     dispatch({ type: 'CHANGE_CURRENT_PAGE', payload: {currentPage: number, showFrom, showTo }})
 }
+
+export const fetchBasket = () => {    
+    let value = JSON.parse(localStorage.getItem('basket'))
+    if(!value) value =[];
+    return {type: "FETCH_BASKET", payload: value}
+}
+
+export const signIn = (user) => {
+    return { type: 'SIGN_IN', payload: user }
+}
+
+export const signOut = () => {
+    return { type: 'SIGN_OUT' }
+}
