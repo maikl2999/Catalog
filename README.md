@@ -1,6 +1,6 @@
 ## Catalog
 
-Shows a catalog of products with the ability to filter, sort and select pages.
+Shows a catalog of products with filtering, sorting, pagination availability.
 
 Demo [https://youtu.be/CDqr27B45x8](https://youtu.be/CDqr27B45x8)
 
@@ -20,7 +20,7 @@ Demo [https://youtu.be/CDqr27B45x8](https://youtu.be/CDqr27B45x8)
 
 ### First step
 
-In the project directory in one Terminal choose directory *server* and:
+In the project directory in one Terminal choose directory `server` and:
 
 1. Install npm dependencies
 
@@ -32,7 +32,7 @@ In the project directory in one Terminal choose directory *server* and:
 
 ### Second step
 
-In the project directory in another Terminal choose directory *server* and:
+In the project directory in another Terminal choose directory `client` and:
 
 1. Install npm dependencies
 
