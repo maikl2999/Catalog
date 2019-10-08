@@ -2,21 +2,23 @@
 
 Shows a catalog of products with the ability to filter, sort and select pages.
 
+Demo [https://youtu.be/CDqr27B45x8](https://youtu.be/CDqr27B45x8)
+
 ## Main Technologies and libs
 
-*react
-+react-dom
-+react-redux
-+react-router-dom
-+redux
-+redux-thunk
-+axios
-+bootstrap
-+json-server
+- react
+- react-dom
+- react-redux
+- react-router-dom
+- redux
+- redux-thunk
+- axios
+- bootstrap
+- json-server
 
 ## Getting Started
 
-#### First step
+### First step
 
 In the project directory in one Terminal choose directory *server* and:
 
@@ -28,7 +30,7 @@ In the project directory in one Terminal choose directory *server* and:
 
 #### `npm start`
 
-#### Second step
+### Second step
 
 In the project directory in another Terminal choose directory *server* and:
 
@@ -43,24 +45,24 @@ In the project directory in another Terminal choose directory *server* and:
 Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Description of the functionality made
+## Features
 
-#### Sign in with Google
+### Google Sign In
 
 Authentication and Authorization with Google.
 
-#### Toolbar
+### Toolbar
 
 You can change number of products, showing on a page, and sort it by position, name or price.
 
-#### Sidebar
+### Sidebar
 
-Allows you to make a selection of goods depending on the price
+Allows you to make a selection of goods depending on the price.
 
-#### Navbar
+### Pagination
 
-change the current page displayed
+Change the current page displayed.
 
-#### Basket
+### Basket functionality handling
 
 Allows you to add products to basket and clear it. Basket working with LocaleStorage.
